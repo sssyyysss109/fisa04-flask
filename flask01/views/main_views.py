@@ -26,6 +26,6 @@ def print_path(subpath):
 @mbp.route('/상품명/')
 @mbp.route('/items/')
 @mbp.route('/items/<itemname>')
-@mbp.route('/items/<itemname>/<quantity>')
+@mbp.route('/items/<itemname>/<float:quantity>')
 def print_itemname(itemname='기본값값',quantity=0):
     return f'{__name__} {itemname, quantity} hello'
